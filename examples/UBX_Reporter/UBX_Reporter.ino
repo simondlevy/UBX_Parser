@@ -1,8 +1,6 @@
 /*
   * UBX_Reporter: A simple demo of the UBX_Parser class on Arduino.
   *
-  * UBX_Parser.h - A header-only C++ class for parsing UBX messages from Ublox GPS
-  *
   * Copyright (C) 2015 Simon D. Levy
   *
   * This code is free software: you can redistribute it and/or modify
