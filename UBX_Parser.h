@@ -215,7 +215,7 @@ class UBX_Parser {
           * message is successfully parsed.
           * @param b the byte
           */
-        int parse(int b)
+        void parse(int b)
         {
             if (b == 0xB5) {
 
@@ -279,7 +279,6 @@ class UBX_Parser {
 
                 if (b == this->chkb) {
                     this->dispatchMessage();
-                    return 1;
                 }
 
                 else {
