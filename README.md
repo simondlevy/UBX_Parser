@@ -7,4 +7,4 @@ Clone / unzip this folder into you Arduino libraries folder, and do
 
 in your source code and then subclass the UBX_Parser class for your application.  See examples/UBX_Reader/UBX_Reader.ino for an example of how to 
 
-Currently supports NAV_POSLLH, NAV_DOP, and NAV_VELNED messages. Tested on Arduino Mega 2560 and Arduino Due. Should work without modification on Teensy board.
+Currently supports NAV_POSLLH, NAV_DOP, and NAV_VELNED messages. Tested on Arduino Mega 2560, Arduino Due, and Teensy 3.2.
