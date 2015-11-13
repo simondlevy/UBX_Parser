@@ -1,7 +1,7 @@
 # UBX_Parser
 C++ parser for binary UBX GPS messages with Arduino example
 
-Clone / unzip this folder into you Arduino libraries folder, and do
+Clone / unzip this folder into your Arduino libraries folder, and do
 
 \#include \<UBX_Parser.h\> 
 
