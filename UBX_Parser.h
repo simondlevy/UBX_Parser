@@ -185,7 +185,7 @@ class UBX_Parser {
                 unsigned long gSpeed,
                 long heading,
                 unsigned long sAcc,
-                unsigned long cAcc);
+                unsigned long cAcc) { }
 
          /**
            * Override this method to report receipt of messages not
