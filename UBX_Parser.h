@@ -96,6 +96,11 @@ class UBX_Parser {
                     unsigned long cAcc = (unsigned long)this->unpack_int32(32);
                     this->handle_NAV_VELNED(iTOW, velN, velE, velD, speed, gSpeed, heading, sAcc, cAcc);
                     }
+                case 0x06: 
+                    {
+                    unsigned long iTOW = (unsigned long)this->unpack_int32(0);
+                    this->handle_NAV_SOL(iTOW);
+                    }
                     break;
                   default:
                     this->reportUnhandled(this->msgid);
@@ -186,6 +191,12 @@ class UBX_Parser {
                 long heading,
                 unsigned long sAcc,
                 unsigned long cAcc) { }
+
+        /**
+          Override this method to handle NAV-SOL messages.
+          @param iTOW GPS Millisecond Time of Week
+          */
+         virtual void handle_NAV_SOL(unsigned long iTOW) { }
 
          /**
            * Override this method to report receipt of messages not
