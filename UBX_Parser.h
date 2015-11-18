@@ -99,7 +99,10 @@ class UBX_Parser {
                 case 0x06: 
                     {
                     unsigned long iTOW = (unsigned long)this->unpack_int32(0);
-                    this->handle_NAV_SOL(iTOW);
+                    long fTOW = this->unpack_int32(4);
+                    short week = this->unpack_int16(8);
+                    char gpsFix = this->payload[10];
+                    this->handle_NAV_SOL(iTOW, fTOW, week, gpsFix);
                     }
                     break;
                   default:
@@ -195,8 +198,14 @@ class UBX_Parser {
         /**
           Override this method to handle NAV-SOL messages.
           @param iTOW GPS Millisecond Time of Week
+          @param fTOW fractional time of week in nanoseconds
+          @param week GPS week number of the navigation epoch
+          @param gpsFix GPS fix type
           */
-         virtual void handle_NAV_SOL(unsigned long iTOW) { }
+         virtual void handle_NAV_SOL(unsigned long iTOW, 
+                 long fTOW, 
+                 short week, 
+                 char gpsFix) { }
 
          /**
            * Override this method to report receipt of messages not

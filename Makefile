@@ -25,5 +25,5 @@ clean:
 	rm -rf Documentation
 
 commit:
-	git commit -a
+	git commit -a  --allow-empty-message -m ''
 	git push
