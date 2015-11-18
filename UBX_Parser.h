@@ -96,6 +96,7 @@ class UBX_Parser {
                     unsigned long cAcc = (unsigned long)this->unpack_int32(32);
                     this->handle_NAV_VELNED(iTOW, velN, velE, velD, speed, gSpeed, heading, sAcc, cAcc);
                     }
+                    /*
                 case 0x06: 
                     {
                     unsigned long iTOW = (unsigned long)this->unpack_int32(0);
@@ -105,6 +106,7 @@ class UBX_Parser {
                     this->handle_NAV_SOL(iTOW, fTOW, week, gpsFix);
                     }
                     break;
+                    */
                   default:
                     this->reportUnhandled(this->msgid);
                     break;
@@ -202,10 +204,12 @@ class UBX_Parser {
           @param week GPS week number of the navigation epoch
           @param gpsFix GPS fix type
           */
+         /*
          virtual void handle_NAV_SOL(unsigned long iTOW, 
                  long fTOW, 
                  short week, 
                  char gpsFix) { }
+                 */
 
          /**
            * Override this method to report receipt of messages not
