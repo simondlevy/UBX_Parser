@@ -100,7 +100,7 @@ class UBX_Parser {
                     {
                     unsigned long iTOW = (unsigned long)this->unpack_int32(0);
                     long fTOW = this->unpack_int32(4);
-                    short week = this->unpack_int16(8);
+                    short week = (short)this->unpack_int16(8);
                     char gpsFix = this->payload[10];
                     this->handle_NAV_SOL(iTOW, fTOW, week, gpsFix);
                     }
